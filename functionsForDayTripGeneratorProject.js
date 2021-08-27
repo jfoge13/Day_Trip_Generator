@@ -8,6 +8,23 @@ let entertainmentArray = ['Movie', 'Play', 'Horse Race', 'Casino', 'State Fair',
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function generateRandomElement(someArray){
      return someArray[Math.floor(Math.random() * someArray.length)];
     
