@@ -62,14 +62,14 @@ if (userInput.toLowerCase() === "yes"){
 
         
         //changes prompt from first instance to second iteration
-        userFeedback2 = prompt("Is there anything else you would like me to change? Yes or No?");
-        userFeedback = userFeedback2
+        userFeedback = prompt("Is there anything else you would like me to change? Yes or No?");
+       
 
 //provides conclusion once user is satisfied with itinerary
         
-        console.log("Wonderful! Have a great time!");
+        
     }
-
+console.log("Wonderful! Have a great time!");
             
         }
         
