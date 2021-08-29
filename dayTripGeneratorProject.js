@@ -1,4 +1,4 @@
-// Establish the arrays with elements that will eventually populate the random day trip 
+// Establish initial arrays
 
 let transportationArray = ['Bus', 'Plane', 'Helicopter', 'Car', 'Limousine', 'Horse', 'Dunebug', 'Hot air Balloon', 'Pack mule'];
 let restaurantArray = ['Pascolo Ristorante (Italian)', 'Bubbas Smokehouse (BBQ)', 'Feng Yua Kitchen (Chinese)', 'King of the Roll (Sushi)', 'Cafe Elouise (French)', 'Tio Gordo (Mexican)'];
@@ -6,23 +6,23 @@ let destinationArray = ['Portland, ME', 'Providence, RI', 'Boston, MA', 'Las Veg
 let entertainmentArray = ['Movie', 'Play', 'Horse Race', 'Casino', 'State Fair', 'Concert', 'Ballet', 'Opera', 'Monster Car Rally'];
 
 
-//create funtion that generates random elements of arrays
+//create random generation function
 
 function generateRandomElement(someArray){
     return someArray[Math.floor(Math.random() * someArray.length)];
    
 }
 
-//allow for program to initialize with user input
+//program initialize with user input
 
 
 let userInput = prompt("Would you like me to plan a day trip for you? Yes or No?")
 
-//provide response for both yes and no answers, yes continues the program to day trip generation
+//if loop for day trip generator
 
 if (userInput.toLowerCase() === "yes"){
 
-//establish variables for values of each array being plugged into randomizing function
+//establish variables for element to be generated
     let destination = generateRandomElement(destinationArray);
     let transportation = generateRandomElement(transportationArray);
     let restaurant = generateRandomElement(restaurantArray);
@@ -38,7 +38,7 @@ if (userInput.toLowerCase() === "yes"){
 
     let userFeedback = prompt("Is there anything you would like me to change about this trip? Yes or No?");
 
-//while loop continues to adjust selected elements of itinerary until user response to prompt is anything other than yes, in this case, no.
+//establish while loop for regenerating undesired elements
     while (userFeedback.toLowerCase() === "yes"){
 
 
@@ -48,7 +48,7 @@ if (userInput.toLowerCase() === "yes"){
         let transportationCorrection = "transportation";
         let entertainmentCorrection = "entertainment";
 
-// allows for any one or more elements to be re-randomized and output to user
+// establish if/else for individual element input in user response
 
         if (itineraryCorrections.includes(destinationCorrection)){
             console.log("Your new destination is " + destination);}
@@ -61,11 +61,11 @@ if (userInput.toLowerCase() === "yes"){
         }
 
         
-        //changes prompt from first instance to second iteration
+        //changes preompt text from first to second iteration
         userFeedback = prompt("Is there anything else you would like me to change? Yes or No?");
        
 
-//provides conclusion once user is satisfied with itinerary
+//provide conclusion of program
         
         
     }
@@ -73,7 +73,7 @@ console.log("Wonderful! Have a great time!");
             
         }
         
-//provides response in case user does not want to generate itinerary in the first place
+//provide response if user does not want to generate trip
     
 else{
     console.log("Maybe another time! Goodbye!")
